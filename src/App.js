@@ -22,6 +22,9 @@ class App extends Component{
       });
   }
   
+  handleChange = (e)=>{
+    this.setState({searchField:e.target.value});
+  }
 
   render(){
 
@@ -32,13 +35,11 @@ class App extends Component{
     return (
       <div>
         <div className="flex flex-col justify-center text-white  items-center bg-gray-900 w-full h-64">
-            <div className="flex font-bold text-6xl w-full  justify-center items-center pt-10 pb-5 tracking-wider">Pokedex</div>
+            <div className="flex font-bold text-5xl md:text-6xl w-full  justify-center items-center pt-10 pb-5 tracking-wider">Pokedex</div>
             <div className="flex w-full justify-center items-center">
               <SearchBox placeholder="Search pokemons..."
-                        handleChange={event=>{
-                                      this.setState({searchField:event.target.value})
-                        }
-              } />
+                        handleChange={this.handleChange}
+              />
             </div>
         </div>
         <div className="flex justify-between px-16 bg-gray-200">

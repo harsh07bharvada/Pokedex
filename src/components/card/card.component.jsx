@@ -13,7 +13,7 @@ export const Card =(props)=>{
     }
     return (
 
-        <div className="card flex flex-col bg-white shadow-lg w-1/5 h-56 m-4 rounded-md justify-center items-center hover:border-red-500"  key ={props.pokemon.name}>
+        <div className="card flex flex-col bg-white shadow-lg w-full md:w-1/5 h-56 m-4 rounded-md justify-center items-center hover:border-red-500"  key ={props.pokemon.name}>
             <div className="flex">
                 <img className="h-32 w-32" src={images(`./`+getIdFromURL(props.pokemon.url)+`.svg`)} alt=""/>
             </div>
